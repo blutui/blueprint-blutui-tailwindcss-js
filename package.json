@@ -1,14 +1,24 @@
 {
-  "name": "blueprint-blutui-tailwindcss",
+  "name": "blueprint-blutui-tailwindcss-js",
   "version": "1.0.0",
-  "description": "Bare bones Canvas with Tailwind CSS for Blutui",
+  "description": "Bare bones Canvas with Tailwind CSS + Parcel.js for Blutui",
   "private": true,
+  "source": [
+    "./src/js/app.js",
+    "./src/styles/global.css"
+  ],
+  "targets": {
+    "default": {
+      "distDir": "./public"
+    }
+  },
   "scripts": {
-    "dev": "tailwindcss -i ./src/styles/global.css -o ./public/styles/global.css --watch",
-    "build": "tailwindcss -i ./src/styles/global.css -o ./public/styles/global.css -m"
+    "dev": "parcel watch --no-hmr --no-source-maps",
+    "build": "parcel build --no-source-maps"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.11",
+    "parcel": "^2.15.4",
     "tailwindcss": "^4.1.11"
   }
 }
