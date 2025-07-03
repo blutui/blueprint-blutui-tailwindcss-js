@@ -1,12 +1,5 @@
 {% extends 'templates/default' %}
 
-{% block styles %}
-<link rel="preconnect" href="https://fonts.bunny.net" />
-<link href="https://fonts.bunny.net/css?family=figtree:400,600,800&display=swap" rel="stylesheet" />
-
-{{ asset('styles/global.css') | stylesheet_tag }}
-{% endblock %}
-
 {% block body %}
 <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400">
   <div class="relative bg-white dark:bg-zinc-800 pb-20 my-8 px-7 pt-8 sm:pb-8 shadow-xl ring-1 ring-zinc-900/5 w-full sm:mx-auto sm:max-w-md sm:rounded-xl">

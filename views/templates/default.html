@@ -6,9 +6,16 @@
 
     <title>{{ settings.site_name }}</title>
 
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600,800&display=swap" rel="stylesheet" />
+
+    {{ asset('styles/global.css') | stylesheet_tag }}
+
     {% block styles %}{% endblock %}
   </head>
   <body class="antialiased">
     {% block body %}{% endblock %}
+
+    {{ asset('js/app.js') | script_tag }}
   </body>
 </html>
